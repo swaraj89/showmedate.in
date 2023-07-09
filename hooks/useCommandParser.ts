@@ -15,8 +15,8 @@ const useCommandParser = (query: Array<string>): Command | ZodError => {
             // if(index === 3) SOURCE.parse(part)
         })
     }catch(error) {
-        console.log(error.message)
-        throw new Error(error.message as string)
+        // console.log(error.message)
+        // throw new Error(error.message as string)
     }
     
     // Expect a return in this format
