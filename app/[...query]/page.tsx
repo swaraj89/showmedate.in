@@ -8,11 +8,11 @@ const Page = ({
 }): JSX.Element => {
   try {
     const command = useCommandParser(params.query);
-    return <>Page: {params.query}</>;
+    return <>Page: {command}</>;
   } catch (error) {
     //gracefully handle error here
-    console.error(error);
-    return <>{error}</>;
+    console.error(JSON.stringify(error));
+    return <>Error: {JSON.stringify(error)}</>;
   }
 };
 
